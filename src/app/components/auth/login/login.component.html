@@ -1,0 +1,64 @@
+<h2>Log in</h2>
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form method="post" action="/Account/Login" novalidate="novalidate">
+                <h4>Use a local account to log in.</h4>
+                <hr>
+                <div class="text-danger validation-summary-valid" data-valmsg-summary="true">
+                    <ul>
+                        <li style="display:none"></li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <label for="Username">Username</label>
+                    <input class="form-control" type="text" data-val="true" data-val-maxlength="The field Username must be a string or array type with a maximum length of '30'."
+                        data-val-maxlength-max="30" data-val-minlength="The field Username must be a string or array type with a minimum length of '2'."
+                        data-val-minlength-min="2" data-val-required="The Username field is required." id="Username" name="Username"
+                        value="">
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Username" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input class="form-control" type="password" data-val="true" data-val-required="The Password field is required." id="Password"
+                        name="Password">
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label for="RememberMe">
+                            <input type="checkbox" data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe"
+                                value="true"> Remember me?
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Log in</button>
+                </div>
+                <div class="form-group">
+                    <p>
+                        <a href="/Account/ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a href="/Account/Register">Register as a new user?</a>
+                    </p>
+                </div>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8BAShfVHtUNCi2kdQA71t2Ywvf0CTPsNA9zo_G3cvptsJPYpGrgnZC216JQR7Ycp_URwK_4190tV5yxyvv1wOEas4rtNgCS8w63aR9QS2G3MjogpI_0Y3ahDAyyxmfFi_2aAgN5NMZA3DL2wloMJGt4">
+                <input name="RememberMe" type="hidden" value="false">
+            </form>
+        </section>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h4>Use another service to log in.</h4>
+            <hr>
+            <div>
+                <p>
+                    There are no external authentication services configured. See
+                    <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                    for details on setting up this ASP.NET application to support logging in via external services.
+                </p>
+            </div>
+        </section>
+    </div>
+</div>
