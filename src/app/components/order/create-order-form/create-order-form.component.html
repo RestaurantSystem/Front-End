@@ -1,0 +1,62 @@
+<form (ngSubmit)="handleSubmit($event)" #createOrderForm="ngForm">
+    <!-- Product -->
+    <div class="form-group">
+        <label for="product">Select a product:</label>
+        <select class="form-control" id="product" name="product" [(ngModel)]="order.productId" #productId="ngModel" required>
+            <option *ngFor="let i of [1,2,3,4]" value="{{i}}">Product {{i}}</option>
+        </select>
+
+        <div *ngIf="productId.invalid && (productId.dirty || productId.touched)" class="alert alert-danger">
+            <div *ngIf="productId.errors.required">
+                Please select a product
+            </div>
+        </div>
+    </div>
+
+    <!-- Waitress -->
+    <div class="form-group">
+        <label for="waitress">Select a waitress:</label>
+        <select class="form-control" id="waitress" name="waitress" [(ngModel)]="order.waitressId" #waitressId="ngModel" required>
+            <option *ngFor="let i of [1,2,3,4]" value="{{i}}">Waitress {{i}}</option>
+        </select>
+
+        <div *ngIf="waitressId.invalid && (waitressId.dirty || waitressId.touched)" class="alert alert-danger">
+            <div *ngIf="waitressId.errors.required">
+                Please select a waitress
+            </div>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="form-group">
+        <label for="waitress">Select a table:</label>
+        <select class="form-control" id="table" name="table" #tableId="ngModel" [(ngModel)]="order.tableId" required>
+            <option *ngFor="let i of [1,2,3,4]" value="{{i}}">Table {{i}}</option>
+        </select>
+
+        <div *ngIf="tableId.invalid && (tableId.dirty || tableId.touched)" class="alert alert-danger">
+            <div *ngIf="tableId.errors.required">
+                Please select a table
+            </div>
+        </div>
+    </div>
+
+    <!-- Bill -->
+    <div class="form-group">
+        <label for="waitress">Select a bill:</label>
+        <select class="form-control" id="bill" name="bill" #billId="ngModel" [(ngModel)]="order.billId" required>
+            <option *ngFor="let i of [1,2,3,4]" value="{{i}}">Bill {{i}}</option>
+        </select>
+
+        <div *ngIf="billId.invalid && (billId.dirty || billId.touched)" class="alert alert-danger">
+            <div *ngIf="billId.errors.required">
+                Please select a bill
+            </div>
+        </div>
+    </div>
+
+    <input type="submit" 
+        class="form-control btn-primary" 
+        value="Place order" 
+        [disabled]="!createOrderForm.form.valid">
+</form>
