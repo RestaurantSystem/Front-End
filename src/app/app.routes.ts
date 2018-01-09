@@ -11,7 +11,8 @@ export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'menager', component: MenagerProfileComponent },
+    { path: 'menager',
+        loadChildren: './manager.menager-profile.module#MenagerProfileComponent'},
     { path: 'weitress', component: WaitressProfileComponent },
     { path: 'cooker', component: CookerProfileComponent }
 ];

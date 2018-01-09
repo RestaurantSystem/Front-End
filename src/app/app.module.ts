@@ -17,6 +17,10 @@ import { CreateOrderFormComponent } from './components/order/create-order-form/c
 import { CookerProfileComponent } from './components/profiles/cooker-profile/cooker-profile.component';
 import { MenagerProfileComponent } from './components/profiles/menager-profile/menager-profile.component';
 import { WaitressProfileComponent } from './components/profiles/waitress-profile/waitress-profile.component';
+import { UsersComponent } from './components/profiles/menager-profile/users/users.component';
+import { AllProductsComponent } from './components/profiles/menager-profile/all-products/all-products.component';
+import { AllIngredientsComponent } from './components/profiles/menager-profile/all-ingredients/all-ingredients.component';
+import { AllSectionsComponent } from './components/profiles/menager-profile/all-sections/all-sections.component';
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { WaitressProfileComponent } from './components/profiles/waitress-profile
         CreateOrderFormComponent,
         CookerProfileComponent,
         MenagerProfileComponent,
-        WaitressProfileComponent
+        WaitressProfileComponent,
+        UsersComponent,
+        AllProductsComponent,
+        AllIngredientsComponent,
+        AllSectionsComponent
     ],
     imports: [
         BrowserModule,
