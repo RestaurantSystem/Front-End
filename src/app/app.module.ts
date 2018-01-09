@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AuthModule } from './/components/auth/auth.module'
 
 import { routes } from './app.routes';
 
@@ -17,16 +18,16 @@ import { CreateOrderFormComponent } from './components/order/create-order-form/c
 import { CookerProfileComponent } from './components/profiles/cooker-profile/cooker-profile.component';
 import { MenagerProfileComponent } from './components/profiles/menager-profile/menager-profile.component';
 import { WaitressProfileComponent } from './components/profiles/waitress-profile/waitress-profile.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpHandler } from '@angular/common/http/src/backend';
 
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        LoginComponent,
         HeaderComponent,
         FooterComponent,
-        RegisterComponent,
         WellcomePageComponent,
         FooterPageComponent,
         CreateOrderFormComponent,
@@ -37,9 +38,13 @@ import { WaitressProfileComponent } from './components/profiles/waitress-profile
     imports: [
         BrowserModule,
         FormsModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes),
+        AuthModule,
+        HttpClientModule 
     ],
-    providers: [],
+    providers: [
+        HttpClient
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
