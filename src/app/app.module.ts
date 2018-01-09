@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AuthModule } from './/components/auth/auth.module';
 
 import { routes } from './app.routes';
 
@@ -21,16 +22,16 @@ import { UsersComponent } from './components/profiles/menager-profile/users/user
 import { AllProductsComponent } from './components/profiles/menager-profile/all-products/all-products.component';
 import { AllIngredientsComponent } from './components/profiles/menager-profile/all-ingredients/all-ingredients.component';
 import { AllSectionsComponent } from './components/profiles/menager-profile/all-sections/all-sections.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpHandler } from '@angular/common/http/src/backend';
 
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        LoginComponent,
         HeaderComponent,
         FooterComponent,
-        RegisterComponent,
         WellcomePageComponent,
         FooterPageComponent,
         CreateOrderFormComponent,
@@ -45,9 +46,13 @@ import { AllSectionsComponent } from './components/profiles/menager-profile/all-
     imports: [
         BrowserModule,
         FormsModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes),
+        AuthModule,
+        HttpClientModule
     ],
-    providers: [],
+    providers: [
+        HttpClient
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
