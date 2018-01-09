@@ -23,4 +23,15 @@ export class AuthService {
                 .set('Content-Type', 'application/x-www-form-urlencoded')
         })
     }
+
+    login(payload: object) {
+        let body = new URLSearchParams();
+        body.set('Password', payload['password'])
+        body.set('Username', payload['username'])
+
+        return this.http.post(url + 'Login', body.toString(), {
+            headers: new HttpHeaders()
+                .set('Content-Type', 'application/x-www-form-urlencoded')
+        })
+    }
 }
