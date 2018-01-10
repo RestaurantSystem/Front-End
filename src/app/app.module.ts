@@ -9,7 +9,8 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { RegisterComponent } from './components/auth/register/register.component';
-
+import { WellcomePageComponent} from './components/wellcome-page/wellcome-page.component';
+import { MenagerComponent } from './components/menager/menager.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,9 @@ import { RegisterComponent } from './components/auth/register/register.component
         LoginComponent,
         HeaderComponent,
         FooterComponent,
-        RegisterComponent
+        RegisterComponent,
+        WellcomePageComponent,
+        MenagerComponent
     ],
     imports: [
         BrowserModule,
