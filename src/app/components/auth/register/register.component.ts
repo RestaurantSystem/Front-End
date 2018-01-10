@@ -35,10 +35,10 @@ export class RegisterComponent implements OnInit {
                 complete: () => {
                     console.log('This is complete!!');
                 }
-            })
+            });
     }
 
     get diagnostics() {
         return JSON.stringify(this.user);
-    };
+    }
 }

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { AuthModule } from './/components/auth/auth.module';
+import { AuthModule } from './components/auth/auth.module';
 
 import { routes } from './app.routes';
 
@@ -11,19 +11,24 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { RegisterComponent } from './components/auth/register/register.component';
+// import { RegisterComponent } from './components/auth/register/register.component';
 import { WellcomePageComponent} from './components/wellcome-page/wellcome-page.component';
 import { MenagerComponent } from './components/menager/menager.component';
 // import { WellcomePageComponent } from './components/wellcome-page/wellcome-page.component';
 // import { FooterPageComponent } from './components/footer-page/footer-page.component';
 import { CreateOrderFormComponent } from './components/order/create-order-form/create-order-form.component';
 import { CookerProfileComponent } from './components/profiles/cooker-profile/cooker-profile.component';
+
 import { MenagerProfileComponent } from './components/profiles/menager-profile/menager-profile.component';
+
 import { WaitressProfileComponent } from './components/profiles/waitress-profile/waitress-profile.component';
+
 import { UsersComponent } from './components/profiles/menager-profile/users/users.component';
+
 import { AllProductsComponent } from './components/profiles/menager-profile/all-products/all-products.component';
 import { AllIngredientsComponent } from './components/profiles/menager-profile/all-ingredients/all-ingredients.component';
 import { AllSectionsComponent } from './components/profiles/menager-profile/all-sections/all-sections.component';
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpHandler } from '@angular/common/http/src/backend';
 
@@ -34,7 +39,7 @@ import { HttpHandler } from '@angular/common/http/src/backend';
         HomeComponent,
         HeaderComponent,
         FooterComponent,
-        RegisterComponent,
+        // RegisterComponent,
         WellcomePageComponent,
         MenagerComponent,
         WellcomePageComponent,
