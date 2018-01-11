@@ -1,54 +1,48 @@
-<div class="container">
-    <h2>Ingredients</h2>
+
+    <h2>Products</h2>
     <div class="col-auto my-1">
-      <button type="button" class="btn btn-success">Success</button>
-    
-    
-    <form class="form-search">
-        <div class="input-append">
-            <input type="text" class="span2">
-            <button type="submit" class="btn" placeholder="search by name">Search</button>
-        </div>
-    </form>
+        <button type="button" class="btn btn-success">Success</button>
+        <form class="form-search">
+            <div class="input-append">
+                <input type="text" class="span2">
+                <button type="submit" class="btn">Search</button>
+            </div>
+        </form>
     </div>
-      
+
     <table class="table table-hover">
         <thead>
-          <tr>
-            <th>#</th>
-            <th>Ingredient</th>
-            <th>In stock</th>
-            <th>Min quantity</th>
-            <th>Used in products</th>
-            <th>Action</th>
-          </tr>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Is stock</th>
+                <th>Quantity in stock</th>
+                <th>Min stock quantity threshold</th>
+                <th>Used in products count</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>chushki</td>
-            <td>200</td>
-            <td>100</td>
-            <td>300</td>
-            <td>
-              <div class="col-auto my-1">
-                <button type="submit" class="btn btn-warning mb-2">Edit</button>
-          </div>
-        </td>
-          </tr>
+            <tr *ngFor="let ingredient of ingredients">
+                <td scope="row">{{ingredient.id}}</td>
+                <td>{{ingredient.name}}</td>
+                <td>{{ingredient.isStock}}</td>
+                <td>{{ingredient.quantityInStock}}</td>
+                <td>{{ingredient.minStockQuantityThreshold}}</td>
+                <td>{{ingredient.usedInProductsCount}}</td>
+            </tr>
         </tbody>
-      </table>
-      </div>
-      <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">Next</a>
-            </li>
-          </ul>
-        </nav>
+    </table>
+</div>
+<nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
