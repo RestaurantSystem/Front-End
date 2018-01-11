@@ -1,0 +1,78 @@
+<div class="container">
+<p>
+    <a class="btn btn-warning" 
+    data-toggle="collapse" href="#collapseExample" 
+    aria-expanded="false" aria-controls="collapseExample">
+     Table #
+    </a>
+     <button class="btn btn-primary" 
+  type="button" data-toggle="collapse" 
+  data-target="#editTable" 
+  aria-expanded="false" aria-controls="editTable"
+  data-text-swap="Close">
+      Open or Close
+  </button>
+  <button class="btn btn-primary" 
+  type="button" data-toggle="collapse" 
+  data-target="#editProducts" 
+  aria-expanded="false" aria-controls="editProducts"
+  data-text-swap="Close">
+      Add Products
+  </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-block">
+     info how many seats
+    </div>
+  </div>
+  <div class="collapse" id="editTable">
+    <div class="card card-block">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Products on table</th>
+                <th>Quantity</th>
+                <th>Single Price</th>
+                <th>Total Price</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>25</td>
+                <td>2</td>
+                <td>2555</td>
+                
+              </tr>
+            </tbody>
+            <tfoot><tr>
+                <th scope="row">Grand Total</th>
+                <td>256848</td>
+              </tr>
+            </tfoot>
+          </table>
+          <button class="btn btn-danger" >Print Bill</button>
+    </div>
+  </div>
+  <div class="collapse" id="editProducts">
+      <div class="card card-block">
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Add Products</th>
+          <th> </th>
+      
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>kartofi na furna</td>
+          <td>250 gr</td>  
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-prymary" >ADD</button>
+ </div>
+</div>
+</div>

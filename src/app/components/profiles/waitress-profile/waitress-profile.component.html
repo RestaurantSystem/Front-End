@@ -1,3 +1,13 @@
-<p>
-  waitress-profile works!
-</p>
+<div class="sidebar-nav col-md-5">
+    <div class="well">
+    <ul class="nav nav-list"> 
+        <h3>Waitress Profile</h3>        
+      <li><a [routerLink]="['tables']">Tables</a></li>
+      <li><a [routerLink]="['all-tables']">Go To Tables</a></li>
+      <li><a [routerLink]="['bills']"> My Bills</a></li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-7">
+    <router-outlet></router-outlet>
+</div>

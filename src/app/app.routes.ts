@@ -9,15 +9,18 @@ import { MenagerProfileComponent } from './components/profiles/menager-profile/m
 import { WaitressProfileComponent } from './components/profiles/waitress-profile/waitress-profile.component';
 import { CookerProfileComponent} from './components/profiles/cooker-profile/cooker-profile.component';
 
+
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
     { path: 'menager',
     loadChildren: './menager/menager.module#MenagerModule'},
-    { path: 'register', component: RegisterComponent },
-    { path: 'weitress', component: WaitressProfileComponent },
-    { path: 'cooker', component: CookerProfileComponent }
+    { path: 'waitress',
+     loadChildren: './components/profile/waitress/wairess.module#WaitressModule' },
+    { path: 'cooker',
+    loadChildren: './components/profile/cooker/cooker.module#CookerModule'}
 ];
 
 @NgModule({

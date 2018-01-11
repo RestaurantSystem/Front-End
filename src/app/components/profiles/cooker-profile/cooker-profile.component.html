@@ -1,3 +1,13 @@
-<p>
-  cooker-profile works!
-</p>
+<div class="sidebar-nav col-md-5">
+    <div class="well">
+    <ul class="nav nav-list"> 
+        <h3>Cooker Profile</h3>        
+      <li><a [routerLink]="['current-orders']">Current Orders</a></li>
+      <li><a [routerLink]="['products']">Products</a></li>
+      <li><a [routerLink]="['ingredients']">Ingredients</a></li>
+     </ul>
+  </div>
+</div>
+<div class="col-md-7">
+    <router-outlet></router-outlet>
+</div>
