@@ -10,6 +10,7 @@ import { MenagerService } from './../../../../core/services/menager.service'
 export class UsersComponent implements OnInit {
     public users: object[]
     public roles: object[]
+    
     constructor(private menagerService: MenagerService) {
         this.users = []
         this.roles = []
@@ -21,6 +22,7 @@ export class UsersComponent implements OnInit {
                 next: data => {
                     this.users = data['users']
                     this.roles = data['roles']
+                    console.log(this.roles)
                 }
             })
     }

@@ -1,4 +1,5 @@
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common'
 import { NgModel } from '@angular/forms';
 
 import { UsersComponent } from './users/users.component';
@@ -17,7 +18,8 @@ import { MenagerService } from '../../../core/services/menager.service';
         AllIngredientsComponent
     ],
     imports: [
-        MenagerRoutingModule
+        MenagerRoutingModule,
+        CommonModule
     ],
     providers: [
         MenagerService
