@@ -7,6 +7,7 @@ import { AllProductsComponent } from './all-products/all-products.component';
 import { AllIngredientsComponent } from './all-ingredients/all-ingredients.component';
 import { AllSectionsComponent } from './all-sections/all-sections.component';
 import { MenagerRoutingModule } from './menager-routing.module';
+import { MenagerService } from '../../../core/services/menager.service';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,9 @@ import { MenagerRoutingModule } from './menager-routing.module';
     ],
     imports: [
         MenagerRoutingModule
+    ],
+    providers: [
+        MenagerService
     ]
 })
 export class MenagerModule { }
