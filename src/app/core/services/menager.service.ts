@@ -14,4 +14,8 @@ export class MenagerService {
     getAllSections() {
         return this.http.get(url + '/Sections/All')
     }
+
+    getAllProducts() {
+        return this.http.get(url + '/Products/All')
+    }
 }

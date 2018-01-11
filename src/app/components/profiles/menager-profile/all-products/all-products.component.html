@@ -1,54 +1,60 @@
 <div class="container">
-<h2>Products</h2>
-<div class="col-auto my-1">
-  <button type="button" class="btn btn-success">Success</button>
+    <h2>Products</h2>
+    <div class="col-auto my-1">
+        <button type="button" class="btn btn-success">Success</button>
 
 
-<form class="form-search">
-    <div class="input-append">
-        <input type="text" class="span2">
-        <button type="submit" class="btn">Search</button>
+        <form class="form-search">
+            <div class="input-append">
+                <input type="text" class="span2">
+                <button type="submit" class="btn">Search</button>
+            </div>
+        </form>
     </div>
-</form>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Type</th>
+                <th>Is Cookable</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td scope="row">{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.type}}</td>
+                <td>{{product.isCookable}}</td>
+                <td>
+                    <div class="col-auto my-1">
+                        <button type="submit" class="btn btn-warning mb-2">Edit</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-  
-<table class="table table-hover">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Type</th>
-        <th>Is Cookable</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Otto</td>
-        <td>
-          <div class="col-auto my-1">
-            <button type="submit" class="btn btn-warning mb-2">Edit</button>
-      </div>
-    </td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  <nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-center">
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
         <li class="page-item disabled">
-          <a class="page-link" href="#" tabindex="-1">Previous</a>
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
         </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item">
-          <a class="page-link" href="#">Next</a>
+            <a class="page-link" href="#">1</a>
         </li>
-      </ul>
-    </nav>
+        <li class="page-item">
+            <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>
