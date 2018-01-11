@@ -1,19 +1,26 @@
+<div class="container">
 <h2>Products</h2>
+<div class="col-auto my-1">
+  <button type="button" class="btn btn-success">Success</button>
 
 
-  <button type="button" class="btn btn-success">Success</button> 
-  <form>
-      <input type="text" name="search" placeholder="Search..">
-  </form>
-    
+<form class="form-search">
+    <div class="input-append">
+        <input type="text" class="span2">
+        <button type="submit" class="btn">Search</button>
+    </div>
+</form>
+</div>
   
 <table class="table table-hover">
     <thead>
       <tr>
         <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Type</th>
+        <th>Is Cookable</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -22,17 +29,26 @@
         <td>Mark</td>
         <td>Otto</td>
         <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
+        <td>Otto</td>
+        <td>
+          <div class="col-auto my-1">
+            <button type="submit" class="btn btn-warning mb-2">Edit</button>
+      </div>
+    </td>
       </tr>
     </tbody>
   </table>
+  </div>
+  <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
