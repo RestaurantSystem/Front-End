@@ -1,55 +1,63 @@
 <div class="container">
     <h2>Products</h2>
     <div class="span2">
-      <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-success">Success</button>
     </div>
     <div class="span4">
-    <form class="form-search">
-        <div class="input-append">
-            <input type="text" class="span2">
-            <button type="submit" class="btn">Search</button>
-        </div>
-    </form>
+        <form class="form-search">
+            <div class="input-append">
+                <input type="text" class="span2">
+                <button type="submit" class="btn">Search</button>
+            </div>
+        </form>
     </div>
-      
+
     <table class="table table-hover">
         <thead>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Tables</th>
-            <th>Type</th>
-            <th>Is for smokers</th>
-            <th>Action</th>
-          </tr>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Tables</th>
+                <th>Type</th>
+                <th>Is for smokers</th>
+                <th>Action</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Otto</td>
-            <td>
-              <div class="col-auto my-1">
-                <button type="submit" class="btn btn-warning mb-2">Edit</button>
-                <button type="button" class="btn btn-danger">Danger</button>
-          </div>
-        </td>
-          </tr>
+            <tr *ngFor="let section of sections">
+                <td>{{section.Id}}</td>
+                <td>{{section.Name}}</td>
+                <td>
+                    <span class="label label-info" *ngFor="let table of section.Tables">
+                        {{table.Number}}
+                    </span>
+                </td>
+                <td>{{section.Type}}</td>
+                <td>{{section.IsForSmokers}}</td>
+                <td>
+                    <button type="submit" class="btn btn-warning">Edit</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                </td>
+            </tr>
         </tbody>
-      </table>
-      </div>
-      <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">Next</a>
-            </li>
-          </ul>
-        </nav>
+    </table>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>
