@@ -10,8 +10,8 @@
     </div>
   </aside> 
 -->
-  <div class="sidebar-nav">
-      <div class="well" style="width:300px; padding: 8px 0;">
+  <div class="sidebar-nav col-md-5">
+      <div class="well">
       <ul class="nav nav-list"> 
           <h3>Menager Profile</h3>        
         <li><a [routerLink]="['user']">Users</a></li>
@@ -22,9 +22,9 @@
       </ul>
     </div>
   </div>
-<aside>
-     <router-outlet></router-outlet>
-</aside>
+  <div class="col-md-7">
+      <router-outlet></router-outlet>
+  </div>
    <!--   <app-users></app-users>
     <app-all-sections></app-all-sections>
     <app-all-products></app-all-products>
