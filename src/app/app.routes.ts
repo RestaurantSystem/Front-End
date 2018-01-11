@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './components/home/home.component';
 
@@ -9,22 +9,21 @@ import { MenagerProfileComponent } from './components/profiles/menager-profile/m
 import { WaitressProfileComponent } from './components/profiles/waitress-profile/waitress-profile.component';
 import { CookerProfileComponent} from './components/profiles/cooker-profile/cooker-profile.component';
 
-import { AllIngredientsComponent } from './components/profiles/menager-profile/all-ingredients/all-ingredients.component';
-import { AllProductsComponent } from './components/profiles/menager-profile/all-products/all-products.component';
-import { AllSectionsComponent } from './components/profiles/menager-profile/all-sections/all-sections.component';
-
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'menager',
+    loadChildren: './menager/menager.module#MenagerModule'},
     { path: 'register', component: RegisterComponent },
-    { path: 'menager', component: MenagerProfileComponent
-       /* children: [
-            {path: 'all-ingredients', component: AllIngredientsComponent},
-            {path: 'all-products', component: AllProductsComponent},
-            {path: 'all-sections', component: AllSectionsComponent}
-        ]*/
-    },
     { path: 'weitress', component: WaitressProfileComponent },
     { path: 'cooker', component: CookerProfileComponent }
 ];
+
+@NgModule({
+    imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
+    exports: [RouterModule]
+  })
+  export class AppRoutes {
+
+  }
