@@ -11,19 +11,23 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { RegisterComponent } from './components/auth/register/register.component';
-import { WellcomePageComponent } from './components/wellcome-page/wellcome-page.component';
-import { FooterPageComponent } from './components/footer-page/footer-page.component';
+// import { RegisterComponent } from './components/auth/register/register.component';
+import { WellcomePageComponent} from './components/wellcome-page/wellcome-page.component';
+import { MenagerModule } from './components/profiles/menager-profile/menager.module';
+// import { WellcomePageComponent } from './components/wellcome-page/wellcome-page.component';
+// import { FooterPageComponent } from './components/footer-page/footer-page.component';
 import { CreateOrderFormComponent } from './components/order/create-order-form/create-order-form.component';
 import { CookerProfileComponent } from './components/profiles/cooker-profile/cooker-profile.component';
+
 import { MenagerProfileComponent } from './components/profiles/menager-profile/menager-profile.component';
+
 import { WaitressProfileComponent } from './components/profiles/waitress-profile/waitress-profile.component';
-import { UsersComponent } from './components/profiles/menager-profile/users/users.component';
-import { AllProductsComponent } from './components/profiles/menager-profile/all-products/all-products.component';
-import { AllIngredientsComponent } from './components/profiles/menager-profile/all-ingredients/all-ingredients.component';
-import { AllSectionsComponent } from './components/profiles/menager-profile/all-sections/all-sections.component';
+
+ // import { UsersComponent } from './components/profiles/menager-profile/users/users.component';
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpHandler } from '@angular/common/http/src/backend';
+import {MenagerRoutingModule} from './components/profiles/menager-profile/menager-routing.module';
 
 
 @NgModule({
@@ -32,23 +36,25 @@ import { HttpHandler } from '@angular/common/http/src/backend';
         HomeComponent,
         HeaderComponent,
         FooterComponent,
+        // RegisterComponent,
         WellcomePageComponent,
-        FooterPageComponent,
+        // MenagerComponent,
+       //  WellcomePageComponent,
+        // UsersComponent,
         CreateOrderFormComponent,
         CookerProfileComponent,
         MenagerProfileComponent,
         WaitressProfileComponent,
-        UsersComponent,
-        AllProductsComponent,
-        AllIngredientsComponent,
-        AllSectionsComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         RouterModule.forRoot(routes),
         AuthModule,
-        HttpClientModule
+        HttpClientModule,
+        MenagerRoutingModule,
+
+       MenagerModule
     ],
     providers: [
         HttpClient

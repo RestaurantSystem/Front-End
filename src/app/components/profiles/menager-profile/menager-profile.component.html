@@ -1,3 +1,33 @@
-<p>
-  menager-profile works!
-</p>
+
+<!--<h3>Menager Profile</h3>
+
+  <aside>
+    <div class="row">
+      <a [routerLink]="['user']">Users</a>
+      <a [routerLink]="['all-sections']">All Sections</a>
+      <a [routerLink]="['all-products']"> All Produscts</a>
+      <a [routerLink]="['all-ingredients']"> All Ingredients</a>
+    </div>
+  </aside> 
+-->
+  <div class="sidebar-nav">
+      <div class="well" style="width:300px; padding: 8px 0;">
+      <ul class="nav nav-list"> 
+          <h3>Menager Profile</h3>        
+        <li><a [routerLink]="['user']">Users</a></li>
+        <li><a [routerLink]="['all-sections']">All Sections</a></li>
+        <li><a [routerLink]="['all-products']"> All Produscts</a></li>
+        <li><a [routerLink]="['all-ingredients']"> All Ingredients</a></li>
+        
+      </ul>
+    </div>
+  </div>
+<aside>
+     <router-outlet></router-outlet>
+</aside>
+   <!--   <app-users></app-users>
+    <app-all-sections></app-all-sections>
+    <app-all-products></app-all-products>
+    <app-all-ingredients></app-all-ingredients>-->
+  
+
