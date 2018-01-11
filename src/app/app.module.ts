@@ -1,33 +1,34 @@
+// Miscellaneous
+import { routes } from './app.routes';
+import { HttpHandler } from '@angular/common/http/src/backend';
+
+// Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from './components/auth/auth.module';
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
+import { MenagerModule } from './components/profiles/menager-profile/menager.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MenagerRoutingModule } from './components/profiles/menager-profile/menager-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { routes } from './app.routes';
-
+// Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-// import { RegisterComponent } from './components/auth/register/register.component';
-import { WellcomePageComponent} from './components/wellcome-page/wellcome-page.component';
-import { MenagerModule } from './components/profiles/menager-profile/menager.module';
-// import { WellcomePageComponent } from './components/wellcome-page/wellcome-page.component';
-// import { FooterPageComponent } from './components/footer-page/footer-page.component';
 import { CreateOrderFormComponent } from './components/order/create-order-form/create-order-form.component';
 import { CookerProfileComponent } from './components/profiles/cooker-profile/cooker-profile.component';
-
 import { MenagerProfileComponent } from './components/profiles/menager-profile/menager-profile.component';
-
 import { WaitressProfileComponent } from './components/profiles/waitress-profile/waitress-profile.component';
-
- // import { UsersComponent } from './components/profiles/menager-profile/users/users.component';
-
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { HttpHandler } from '@angular/common/http/src/backend';
-import {MenagerRoutingModule} from './components/profiles/menager-profile/menager-routing.module';
+import { WellcomePageComponent } from './components/wellcome-page/wellcome-page.component';
+// import { RegisterComponent } from './components/auth/register/register.component';
+// import { WellcomePageComponent } from './components/wellcome-page/wellcome-page.component';
+// import { FooterPageComponent } from './components/footer-page/footer-page.component';
+// import { UsersComponent } from './components/profiles/menager-profile/users/users.component';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import {MenagerRoutingModule} from './components/profiles/menager-profile/menage
         // RegisterComponent,
         WellcomePageComponent,
         // MenagerComponent,
-       //  WellcomePageComponent,
+        //  WellcomePageComponent,
         // UsersComponent,
         CreateOrderFormComponent,
         CookerProfileComponent,
@@ -50,11 +51,12 @@ import {MenagerRoutingModule} from './components/profiles/menager-profile/menage
         BrowserModule,
         FormsModule,
         RouterModule.forRoot(routes),
+        BrowserAnimationsModule,
+        ToastModule.forRoot(),
         AuthModule,
         HttpClientModule,
         MenagerRoutingModule,
-
-       MenagerModule
+        MenagerModule
     ],
     providers: [
         HttpClient
