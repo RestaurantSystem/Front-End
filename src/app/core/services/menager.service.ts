@@ -18,4 +18,8 @@ export class MenagerService {
     getAllProducts() {
         return this.http.get(url + '/Products/All')
     }
+
+    getAllIngredients() {
+        return this.http.get(url + '/Ingredients/All')
+    }
 }

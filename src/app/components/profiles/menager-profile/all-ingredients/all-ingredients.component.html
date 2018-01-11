@@ -1,3 +1,35 @@
-<p>
-  all-ingredients works!
-</p>
+<div class="container">
+    <h2>Products</h2>
+    <div class="col-auto my-1">
+        <button type="button" class="btn btn-success">Success</button>
+        <form class="form-search">
+            <div class="input-append">
+                <input type="text" class="span2">
+                <button type="submit" class="btn">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Is stock</th>
+                <th>Quantity in stock</th>
+                <th>Min stock quantity threshold</th>
+                <th>Used in products count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ingredient of ingredients">
+                <td scope="row">{{ingredient.id}}</td>
+                <td>{{ingredient.name}}</td>
+                <td>{{ingredient.isStock}}</td>
+                <td>{{ingredient.quantityInStock}}</td>
+                <td>{{ingredient.minStockQuantityThreshold}}</td>
+                <td>{{ingredient.usedInProductsCount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
