@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
                 next: res => {
                     if (res['id']) {
                         // reg successful
-                        this.router.navigateByUrl('/login')                        
+                        this.router.navigateByUrl('/login')
                     } else {
                         console.log('No');
                     }
