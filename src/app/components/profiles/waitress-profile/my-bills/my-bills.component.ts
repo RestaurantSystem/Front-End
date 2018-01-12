@@ -13,8 +13,19 @@ export class MyBillsComponent implements OnInit {
    }
 
   ngOnInit() {
-    
+    this.waitressService.getBills()
+    .subscribe({
+        next: data => {
+            for (const key in data) {
+                if (data.hasOwnProperty(key)) {
+                    this.bills.push(data[key]);
+                    console.log(data[key]);
+                }
+            }
+        },
+        complete: () => {
+            console.log(this.bills);
+        }
+      });
   }
-
 }
-

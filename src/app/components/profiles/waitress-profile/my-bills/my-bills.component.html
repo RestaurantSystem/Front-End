@@ -9,15 +9,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr >
-            <th scope="row">1</th>
-            <td>10</td>
+          <tr *ngFor="let bill of bills">
+            <th scope="row">{{bill.id}}</th>
+            <td>{{bill.amount}}</td>
           </tr>
         </tbody>
         <tfoot>
             <tr>
               <td>Total Money</td>
-              <td>$180</td>
+              <td>{{bill.sum}}</td>
             </tr>
           </tfoot>
       </table>
