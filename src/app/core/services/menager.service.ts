@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { environment } from './../../../environments/environment'
 
-const url = `http://localhost:54857/Manager`
+const port = environment.serverPort
+const url = `http://localhost:${port}/Manager`
 
 @Injectable()
 export class MenagerService {
