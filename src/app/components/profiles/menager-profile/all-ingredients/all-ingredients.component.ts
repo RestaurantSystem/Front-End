@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-import { MenagerService } from './../../../../core/services/menager.service'
+import { Component, OnInit } from '@angular/core';
+import { MenagerService } from './../../../../core/services/menager.service';
 
 @Component({
     selector: 'app-all-ingredients',
@@ -7,18 +7,18 @@ import { MenagerService } from './../../../../core/services/menager.service'
     styleUrls: ['./all-ingredients.component.css']
 })
 export class AllIngredientsComponent implements OnInit {
-    public ingredients: object[]
+    public ingredients: object[];
 
     constructor(private menagerService: MenagerService) {
-        this.ingredients = []
+        this.ingredients = [];
     }
 
     ngOnInit() {
         this.menagerService.getAllIngredients()
             .subscribe({
                 next: data => {
-                    this.ingredients = data['ingredients']
+                    this.ingredients = data['ingredients'];
                 }
-            })
+            });
     }
 }
