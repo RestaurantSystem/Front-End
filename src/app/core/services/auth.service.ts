@@ -3,7 +3,8 @@ import { environment } from './../../../environments/environment';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const url = `http://localhost:54857/Account/`;
+const port = environment.serverPort;
+const url = `http://localhost:${port}/Manager`;
 
 @Injectable()
 export class AuthService {

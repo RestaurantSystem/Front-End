@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core'
-import { MenagerService } from './../../../../core/services/menager.service'
+import { Component, OnInit } from '@angular/core';
+import { MenagerService } from './../../../../core/services/menager.service';
 
 @Component({
     selector: 'app-all-products',
@@ -7,19 +7,19 @@ import { MenagerService } from './../../../../core/services/menager.service'
     styleUrls: ['./all-products.component.css']
 })
 export class AllProductsComponent implements OnInit {
-    public products: object[]
+    public products: object[];
 
-    constructor(private menagerService: MenagerService) { 
-        this.products = []
+    constructor(private menagerService: MenagerService) {
+        this.products = [];
     }
 
     ngOnInit() {
         this.menagerService.getAllProducts()
             .subscribe({
                 next: data => {
-                    this.products = data['products']
-                    console.log(this.products)
+                    this.products = data['products'];
+                    console.log(this.products);
                 }
-            })
+            });
     }
 }
