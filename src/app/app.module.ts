@@ -31,6 +31,7 @@ import { MenagerRoutingModule } from './components/profiles/menager-profile/mena
 import { WaitressProfileComponent } from './components/profiles/waitress-profile/waitress-profile.component';
 import { WaitressModule } from './components/profiles/waitress-profile/waitress.module';
 import { WaitressRoutingModule} from './components/profiles/waitress-profile/waitress-routing.module';
+import { WaitressService } from './core/services/waitress.service';
 
 
 
@@ -60,7 +61,8 @@ import { WaitressRoutingModule} from './components/profiles/waitress-profile/wai
         CookerRoutingModule
     ],
     providers: [
-        HttpClient
+        HttpClient,
+        WaitressService
     ],
     bootstrap: [AppComponent]
 })

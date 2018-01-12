@@ -7,7 +7,7 @@ import {TablesComponent } from './tables/tables.component';
 import {WaitressRoutingModule} from './waitress-routing.module';
 import { MyBillsComponent } from './my-bills/my-bills.component';
 import { WaitressService } from '../../../core/services/waitress.service';
-
+import {CommonModule} from '@angular/common';
 @NgModule({
     declarations: [
        AllTablesComponent,
@@ -15,7 +15,8 @@ import { WaitressService } from '../../../core/services/waitress.service';
        MyBillsComponent
     ],
     imports: [
-        WaitressRoutingModule
+        WaitressRoutingModule,
+        CommonModule
     ],
     providers: [
         WaitressService

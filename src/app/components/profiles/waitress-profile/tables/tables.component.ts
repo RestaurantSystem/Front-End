@@ -16,8 +16,20 @@ ngOnInit() {
     this.waitressService.getTables()
         .subscribe({
             next: data => {
-                this.tables = data['tables'];
+                for (const key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        this.tables.push(data[key]);
+                    }
+                }
+            },
+            complete: () => {
+                console.log(this.tables);
             }
         });
+            /*
+            next: data => {
+                this.table = data['table'];
+                console.log(this.table);
+            }*/
  }
 }
