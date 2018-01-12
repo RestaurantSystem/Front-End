@@ -31,9 +31,12 @@ export class LoginComponent implements OnInit {
             .subscribe({
                 next: res => {
                     if (res['value'] === undefined) {
-                        let userName = res[res['length'] - 1]
+                        let userId = res[res['length'] - 1]
+                        let userName = res[res['length'] - 2]
+                        delete res[res['length'] - 2]
                         delete res[res['length'] - 1]
                         sessionStorage.setItem('userName', userName)
+                        sessionStorage.setItem('userId', userId)
                         sessionStorage.setItem('roles', JSON.stringify(res))
                         this.toastr.success('Login successful!')
                         console.log('true')
