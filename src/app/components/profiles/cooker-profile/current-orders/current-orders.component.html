@@ -1,26 +1,26 @@
 <table class="table table-hover">
     <thead>
-      <tr>
-        <th>#</th>
-        <th>Product Name</th>
-        <th>Product Type</th>
-        <th>Waiter Name</th>
-        <th>Order Time</th>
-        <th>Action</th>
-      </tr>
+        <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Product Type</th>
+            <th>Waiter Name</th>
+            <th>Order Time</th>
+            <th>Action</th>
+        </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>kartofena salata</td>
-        <td>salad</td>
-        <td>vesko</td>
-        <td>get current date</td>
-        <td>
-            <div class="col-auto my-1">
-              <button type="submit" class="btn btn-warning mb-2">Ready</button>
-        </div>
-      </td>
-      </tr>
+        <tr *ngFor="let order of orders">
+            <th scope="row">{{order.orderId}}</th>
+            <td>{{order.productName}}</td>
+            <td>{{order.productType}}</td>
+            <td>{{order.waiterName}}</td>
+            <td>{{order.orderTime | date }}</td>
+            <td>
+                <div class="col-auto my-1">
+                    <button type="submit" class="btn btn-warning mb-2">Ready</button>
+                </div>
+            </td>
+        </tr>
     </tbody>
-  </table>
+</table>

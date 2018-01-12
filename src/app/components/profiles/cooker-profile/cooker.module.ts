@@ -1,10 +1,13 @@
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { NgModel } from '@angular/forms';
+import { CookerRoutingModule } from './cooker-routing.module';
+import { CommonModule } from '@angular/common'
 
-import { CurrentOrdersComponent} from './current-orders/current-orders.component';
+import { CurrentOrdersComponent } from './current-orders/current-orders.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
 import { ProductsComponent } from './products/products.component';
-import { CookerRoutingModule } from './cooker-routing.module';
+
+import { CookService } from './../../../core/services/cook.service'
 
 @NgModule({
     declarations: [
@@ -13,7 +16,11 @@ import { CookerRoutingModule } from './cooker-routing.module';
         ProductsComponent
     ],
     imports: [
-        CookerRoutingModule
+        CookerRoutingModule,
+        CommonModule
+    ],
+    providers: [
+        CookService
     ]
 })
 export class CookerModule { }
