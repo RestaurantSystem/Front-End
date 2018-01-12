@@ -6,6 +6,7 @@ import {TablesComponent } from './tables/tables.component';
 
 import {WaitressRoutingModule} from './waitress-routing.module';
 import { MyBillsComponent } from './my-bills/my-bills.component';
+import { WaitressService } from '../../../core/services/waitress.service';
 
 @NgModule({
     declarations: [
@@ -15,6 +16,9 @@ import { MyBillsComponent } from './my-bills/my-bills.component';
     ],
     imports: [
         WaitressRoutingModule
+    ],
+    providers: [
+        WaitressService
     ]
 })
 export class WaitressModule { }

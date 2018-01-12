@@ -18,21 +18,22 @@
             <th>Action</th>
           </tr>
         </thead>
+  
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
+            <tr *ngFor="let tables of table">
+              <td scope="row">{{tables.id}}</td>
+              <td>{{tables.name}}</td>
+              <td>{{tables.seats}}</td>
+            <tr>
             <td>
-              <div class="col-auto my-1">
-                <button type="submit" class="btn btn-warning mb-2">Reserve Table</button>
-               
-          </div>
-        </td>
-          </tr>
+                <div class="col-auto my-1">
+                  <button type="submit" class="btn btn-warning mb-2">Reserve Table</button>
+                </div>
+            </td>
+            
         </tbody>
       </table>
-      </div>
+  </div>
       <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-center">
             <li class="page-item disabled">
