@@ -17,8 +17,8 @@ export const routes: Routes = [
     { path: 'register', component: RegisterComponent },
     {
         path: 'menager',
-        // loadChildren: './app/components/menager/menager.module#MenagerModule'
-        loadChildren: './menager/menager.module#MenagerModule'
+        loadChildren: './app/components/menager/menager.module#MenagerModule'
+        //loadChildren: './menager/menager.module#MenagerModule'
     },
     {
         path: 'waitress',

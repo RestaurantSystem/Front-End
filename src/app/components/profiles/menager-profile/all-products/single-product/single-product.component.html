@@ -1,0 +1,16 @@
+<td scope="row">
+    {{product.id}}</td>
+<td>{{product.name}}</td>
+<td>{{product.price}}</td>
+<td>{{product.type}}</td>
+<td>{{product.isCookable}}</td>
+<td>
+    <div class="col-auto">
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">Edit</button>
+    </div>
+</td>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <app-edit-product [product]="product"></app-edit-product>
+</div>
